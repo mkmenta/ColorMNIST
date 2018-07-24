@@ -22,10 +22,6 @@ class ColorMNIST(Dataset):
                          [127, 127, 127],
                          [188, 189, 34],
                          [23, 190, 207]]
-        # if color == 'num':
-        # Move colors so that they don't match between 'num' and 'back' version
-        #    self.pallette.append(self.pallette[0])
-        #    self.pallette = self.pallette[1:]
 
         if split == 'train':
             fimages = os.path.join(path, 'raw', 'train-images-idx3-ubyte')
