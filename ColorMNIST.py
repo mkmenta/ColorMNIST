@@ -6,14 +6,10 @@ from PIL import Image
 from torch.utils.data import Dataset
 from torchvision import transforms
 
-# Coded following https://pytorch.org/tutorials/beginner/data_loading_tutorial.html
-
 __all__ = ["ColorMNIST"]
 
 
 class ColorMNIST(Dataset):
-    """MNIST dataset iterator prepared for autoencoding"""
-
     def __init__(self, color, split, path, transform_list=[], randomcolor=False):
         assert color in ['num', 'back', 'both'], "color must be either 'num', 'back' or 'both"
         self.pallette = [[31, 119, 180],
